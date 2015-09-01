@@ -1,0 +1,2 @@
+# ElasticSearch-Jekyll
+Implement Full text searching on a [Jekyll](http://jekyllrb.com) Blog using [ElasticSearch](https://www.elastic.co/). The `master` branch contains the node.js application running to handle the api calls to a hosted ElasticSearch instance from [appbase.io](https://appbase.io/). The `gh-pages` branch contains the blog made using Jekyll hosted by GitHub Pages. The working example of the blog can be found at [http://elastic.jekyll.botleg.com](http://elastic.jekyll.botleg.com).
