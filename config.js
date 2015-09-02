@@ -6,4 +6,16 @@ module.exports = {
 	username: process.env.USERNAME,
 	password: process.env.PASSWORD,
 	collection: process.env.COLLECTION,
+
+	search: {
+		query: {
+			multi_match: {
+				type: 'best_fields',
+				fuzziness: 'AUTO',
+				tie_breaker: 0.3,
+				fields: ['title', 'text']
+			}
+		},
+		_source: ['title', 'summary']
+	}
 };
