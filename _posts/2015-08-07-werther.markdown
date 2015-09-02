@@ -1,6 +1,7 @@
 ---
-layout: post
+summary: A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
 title:  "Werther"
+layout: post
 date:   2015-08-07 18:23:42
 categories: jekyll update
 ---

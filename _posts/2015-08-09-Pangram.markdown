@@ -1,6 +1,7 @@
 ---
-layout: post
+summary:  The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps.
 title:  "Pangram"
+layout: post
 date:   2015-08-09 18:23:42
 categories: jekyll update
 ---
