@@ -34,7 +34,7 @@ module.exports = function(client, config) {
 	});
 
 	router.post('/commit', koaBody, function*(next) {
-		if (this.request.body.commits !== null) {
+		if (typeof this.request.body.commits !== 'undefined') {
 			for (var commit of this.request.body.commits) {
 				for (var add of commit.added) {
 					if (add.indexOf('_posts/') > -1) {
