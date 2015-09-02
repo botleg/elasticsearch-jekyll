@@ -33,5 +33,57 @@ module.exports = function(client, config) {
 		this.body = result;
 	});
 
+	router.post('/commit', koaBody, function*(next) {
+		if (this.request.body.commits !== null) {
+			for (var commit of this.request.body.commits) {
+				for (var add of commit.added) {
+					if (add.indexOf('_posts/') > -1) {
+						var text = yield request(config.baseurl + add);
+						yield client.index({
+							index: config.appname,
+							type: config.collection,
+							id: add.substring(18, add.length - 9),
+							body: {
+								title: text.body.split('\n')[2].slice(7),
+								summary: text.body.split('\n')[1].slice(9),
+								text: text.body,
+								comments: []
+							}
+						});
+					}
+				}
+
+				for (var add of commit.removed) {
+					if (add.indexOf('_posts/') > -1) {
+						yield client.delete({
+							index: config.appname,
+							type: config.collection,
+							id: add.substring(18, add.length - 9)
+						});
+					}
+				}
+
+				for (var add of commit.modified) {
+					if (add.indexOf('_posts/') > -1) {
+						var text = yield request(config.baseurl + add);
+						yield client.update({
+							index: config.appname,
+							type: config.collection,
+							id: add.substring(18, add.length - 9),
+							body: {
+								doc: {
+									title: text.body.split('\n')[2].slice(7),
+									text: text.body,
+									summary: text.body.split('\n')[1].slice(9)
+								}
+							}
+						});
+					}
+				}
+			}
+		}
+		this.body = true;
+	});
+
 	return router;
 };
