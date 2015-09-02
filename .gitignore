@@ -30,3 +30,5 @@ node_modules
 #Sublime & User Files
 .sublime
 .sass-cache/
+_site/
+.env

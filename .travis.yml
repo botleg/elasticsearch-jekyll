@@ -1,0 +1,9 @@
+script: true
+deploy:
+  provider: openshift
+  user: $EMAIL_ADDRESS
+  password:
+    secure: quEF97S4CWzNILs1grPJvpXYYgwOLDXM1WCUrJqTwrw43sH68OWbgz2/4J7y16TbqnBhRiP6XvT84nanAp9XR9divXB/5Bds6xDjJWmq6B7qP6cmYRzdRwW+gTxc2DcuLgaK3WWyk5uv7P3kjsQyeOndOQDicckOdhBCM1RKItxUyg8Kew+ZCYuAjpBw/0wcnqB7jinv4s0nIwppiUoEZ10RTtYfJ0hqa338uKMlrZWeW8UNvj4nBx/2cqiCveAXaUi7BGi0PKS031cAeQ1tXfkI27MSxuloIhA92jyHsF7Sz1He4kyxPOuw/uNw6Hpm4ULHxrVuKBmxUkWapLKWNIiFajdmK+wN9i8Q63baY1XxfWVbtuoNBuZLV1HMUQUHUzcWe4MqTCUeg/cI3S12t2tEHXqYwO2wd8wg7Nl3VtIAdo/sl/7riRM6++KTV292+L1uG2rE0L1RvcGHN0QRxGtS8fCGE6HLqSrRnPgP6blCJQ4mkRPs1phnUs/UJ8vUf1PGHJmg2OGGYxM/O7iCfCULDHz3yi/rGzsuRlSEZDFZ2ZldSo8o0gc1vYTtdDWovZg29OSThwU/5Jarc4W1k/plPIeFOePdxS/ZSPGKopmWJeiIuIzvK5XeUNTlqGr7NB5NMufeyg3xiG9z6Fn73mrbtOfYcHcPph5mSpxVDVk=
+  app: $APP_NAME
+  domain: $DOMAIN_NAME
+  on: master
