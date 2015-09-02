@@ -1,6 +1,6 @@
 ---
 summary: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor
-title:  "Lorem ipsum"
+title: Lorem ipsum
 layout: post
 date:   2015-08-02 18:23:42
 categories: jekyll update

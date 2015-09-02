@@ -1,6 +1,6 @@
 ---
 summary: The European languages are members of the same family. Their separate existence is a myth.
-title:  "Li Europan lingues En"
+title: Li Europan lingues En
 layout: post
 date:   2015-08-05 18:23:42
 categories: jekyll update

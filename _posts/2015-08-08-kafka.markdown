@@ -1,6 +1,6 @@
 ---
 summary: One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.
-title:  "Kafka"
+title: Kafka
 layout: post
 date:   2015-08-08 18:23:42
 categories: jekyll update
