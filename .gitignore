@@ -20,3 +20,5 @@ tmp/*
 /vendor
 /test/source/file_name.txt
 .sublime/
+.env
+node_modules/
