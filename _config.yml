@@ -3,6 +3,7 @@ title: ElasticSearch with Jekyll
 email: hanzel@botleg.com
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://elastic.jekyll.botleg.com" # the base hostname & protocol for your site
+permalink: /posts/:title
 github_username:  botleg
 
 # Build settings

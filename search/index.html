@@ -1,13 +1,13 @@
 ---
 layout: default
-type: home
+type: search
 ---
 
 <div class="home">
   
-  <h1 class="page-heading">Posts</h1>
+  <h1 class="page-heading">Search results for '<span id="query"></span>'</h1>
 
-  <ul class="post-list">
+  <ul class="post-list" id="post-list">
     {% for post in site.posts %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
@@ -17,7 +17,5 @@ type: home
       </li>
     {% endfor %}
   </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
